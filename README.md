@@ -4,6 +4,10 @@ Wednesday Skinmatch is a personalised Korean skincare recommendation prototype. 
 
 > This is a portfolio prototype, not medical advice. Product and ingredient records are simplified demo data. Always patch test and check official product labels.
 
+## Live Demo
+
+[Try Wednesday Skinmatch](https://wednesday-skinmatch-gseyizkfmwg3kjyfulej66.streamlit.app/)
+
 ## Features
 
 - Skin profile builder
