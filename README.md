@@ -1,72 +1,97 @@
-# Wednesday Skinmatch 🌿
+# Wednesday Skinmatch
 
-Wednesday Skinmatch is a portfolio prototype for a personalised Korean skincare recommendation app. It recommends products based on a user's skin type, skin concerns, sensitivities, ingredient flags, and logged good/bad product reactions.
+Wednesday Skinmatch is a personalised Korean skincare recommendation prototype. It recommends products based on skin type, concerns, sensitivities, avoid ingredients, and logged good/bad product reactions.
 
-> Important: This is an educational software project, not medical advice. The demo product data is simplified and should be verified before real-world use.
+> This is a portfolio prototype, not medical advice. Product and ingredient records are simplified demo data. Always patch test and check official product labels.
 
 ## Features
 
-- Skin profile form
-- Product search by name, brand, category, or barcode
-- Ingredient flag viewer
-- Reaction logger for good, neutral, and bad reactions
-- Rule-based recommendation engine
-- Explainable recommendation output
-- Demo Korean skincare product dataset
-- Beginner-friendly GitHub structure
+- Skin profile builder
+- Product search and typed barcode lookup
+- Ingredient risk explanation
+- Product comparison
+- Routine builder for morning/night routines
+- Reaction logger for good, neutral, and bad product reactions
+- Personalised recommendation scoring
+- Local CSV storage for development
+- Optional Supabase login and cloud database storage
 
-## Tech Stack
+## Tech stack
 
 - Python
 - Streamlit
 - Pandas
-- CSV-based demo database
+- Local CSV files for MVP storage
+- Optional Supabase Auth + Database for cloud mode
 
-## Demo Flow
+## Run locally
 
-1. Go to **Skin Profile**.
-2. Select your skin type, concerns, sensitivities, and preferences.
-3. Go to **Product Search**.
-4. Search for a product or barcode.
-5. Check the match score and ingredient cautions.
-6. Go to **Reaction Logger**.
-7. Save good or bad reactions.
-8. Go to **Recommendations**.
-9. See personalised product matches.
-
-## Example Product Barcode Values
-
-You can test barcode lookup with these demo barcodes:
-
-```text
-8801000000011 - Anua Heartleaf 77 Soothing Toner
-8801000000028 - Round Lab Birch Juice Moisturizing Sunscreen
-8801000000325 - VT Cosmetics Reedle Shot 300
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+streamlit run app.py
 ```
 
-## Recommendation Logic
+## Project structure
 
-The app starts with a base score and adjusts it using:
+```text
+wednesday-skinmatch/
+├── app.py
+├── requirements.txt
+├── data/
+│   ├── products.csv
+│   ├── ingredients.csv
+│   ├── product_ingredients.csv
+│   ├── user_profiles.csv
+│   └── user_reactions.csv
+├── src/
+│   ├── data_loader.py
+│   ├── recommender.py
+│   └── storage.py
+├── docs/
+│   ├── SUPABASE_SETUP.md
+│   ├── VSCODE_GIT_WORKFLOW.md
+│   ├── GITHUB_STEPS.md
+│   ├── DATABASE_SCHEMA.md
+│   └── RECOMMENDATION_LOGIC.md
+└── .streamlit/
+    └── secrets.example.toml
+```
 
-- Skin type match
-- Concern match
-- Fragrance/alcohol/essential oil preferences
-- Sensitivity flags
-- User avoid ingredients
-- Ingredients shared with products the user liked
-- Ingredients shared with products the user reacted badly to
-- Texture/comedogenic caution
+## How scoring works
 
-The goal is not to say a product is perfectly good or bad. The goal is to explain why a product may or may not suit a specific user.
+The app starts each product with a base score, then adjusts the score based on:
 
-## Future Improvements
+- skin type match
+- concern tag match
+- preferences such as fragrance-free or alcohol-free
+- sensitivity flags
+- manual avoid ingredients
+- overlap with ingredients from products the user liked
+- overlap with ingredients from products the user reacted badly to
+- ingredient-level risk explanation
 
-- Real barcode scanner using a mobile app
-- Supabase or PostgreSQL backend
-- User login
-- Admin dashboard for adding products
-- Product image upload
-- Real product database/API integration
-- More detailed ingredient dictionary
-- Unit tests
-- Deployment to Streamlit Community Cloud
+## Supabase cloud setup
+
+The app runs in local CSV mode by default. To enable cloud login and database storage, follow:
+
+```text
+docs/SUPABASE_SETUP.md
+```
+
+## GitHub workflow
+
+For VSCode and GitHub commands, follow:
+
+```text
+docs/VSCODE_GIT_WORKFLOW.md
+```
+
+## Future improvements
+
+- Real mobile barcode scanning
+- Larger Korean skincare product dataset
+- Admin screen for adding products
+- Public deployment through Streamlit Community Cloud
+- Mobile app version using Flutter

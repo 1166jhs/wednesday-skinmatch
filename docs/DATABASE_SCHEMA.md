@@ -1,75 +1,54 @@
 # Database Schema
 
-The first version uses CSV files instead of a real database. These CSV files are designed so they can later be moved into SQLite, PostgreSQL, or Supabase.
+The MVP uses CSV files. The cloud version uses Supabase for user profiles and reaction history.
 
-## products.csv
+## Local CSV files
 
-Stores product-level information.
+### products.csv
 
-| Column | Description |
-|---|---|
-| product_id | Unique product ID |
-| barcode | Product barcode or demo barcode |
-| brand | Product brand |
-| name | Product name |
-| category | Toner, cleanser, serum, sunscreen, etc. |
-| skin_type_tags | Skin types the product may suit |
-| concern_tags | Skin concerns the product may target |
-| texture | Product texture |
-| price_tier | budget, mid, or high |
-| fragrance_free | yes/no |
-| alcohol_free | yes/no |
-| essential_oil_free | yes/no |
-| comedogenic_caution | yes/no |
-| notes | Extra notes |
+Product catalog demo data.
 
-## ingredients.csv
+### ingredients.csv
 
-Stores ingredient-level information.
+Ingredient names, categories, flags, benefits, and possible concerns.
 
-| Column | Description |
-|---|---|
-| ingredient_name | Ingredient name |
-| ingredient_category | Humectant, active, fragrance, exfoliant, etc. |
-| flags | Machine-readable tags used by recommendation logic |
-| benefits | Possible benefit category |
-| possible_concerns | Possible caution explanation |
+### product_ingredients.csv
 
-## product_ingredients.csv
+Many-to-many table linking products to ingredients.
 
-Links products to ingredients.
+### user_profiles.csv
 
-| Column | Description |
-|---|---|
-| product_id | Product ID from products.csv |
-| ingredient_name | Ingredient name from ingredients.csv |
-| ingredient_order | Simplified ingredient order |
+Local demo skin profile storage.
 
-## user_reactions.csv
+### user_reactions.csv
 
-Stores the user's product history.
+Local demo reaction history storage.
 
-| Column | Description |
-|---|---|
-| reaction_id | Unique reaction record ID |
-| user_id | Demo user ID |
-| product_id | Product used |
-| reaction_result | Good, Neutral, or Bad |
-| reaction_type | Reaction category |
-| severity | 1 to 5 |
-| notes | User notes |
-| date_added | Date saved |
+## Supabase tables
 
-## Future Database Tables
+### skin_profiles
 
-For a production version, convert the CSV files into tables:
-
-```text
-users
-skin_profiles
-products
-ingredients
-product_ingredients
-user_reactions
-recommendation_history
+```sql
+user_id uuid primary key
+skin_type text
+concerns text[]
+sensitivities text[]
+preferences text[]
+avoid_ingredients text[]
+updated_at timestamptz
 ```
+
+### user_reactions
+
+```sql
+reaction_id bigint primary key
+user_id uuid
+product_id integer
+reaction_result text
+reaction_type text
+severity integer
+notes text
+date_added date
+```
+
+Supabase product data can be added later, but this version keeps product data in CSV so the app is easy to run locally.

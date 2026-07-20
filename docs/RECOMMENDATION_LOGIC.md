@@ -1,68 +1,57 @@
 # Recommendation Logic
 
-Wednesday Skinmatch uses a rule-based recommendation system. This is easier to explain than a black-box AI model and is better for the first portfolio version.
+Wednesday Skinmatch uses an explainable rule-based recommendation system.
 
-## Base Score
+## Score inputs
 
-Each product starts at 50 points.
+- Skin type tags
+- Skin concern tags
+- Product preferences
+- Sensitivity flags
+- Manual avoid ingredients
+- Past good reactions
+- Past bad reactions
+- Ingredient-level risk breakdown
 
-## Positive Rules
-
-| Rule | Points |
-|---|---:|
-| Product matches skin type | +15 |
-| Product matches selected concern | +8 per concern, up to +24 |
-| Product matches preference such as fragrance-free | +5 |
-| Product shares ingredients with products the user liked | +3 per ingredient, up to +12 |
-
-## Negative Rules
-
-| Rule | Points |
-|---|---:|
-| Product does not match selected preference | -8 |
-| Product has sensitivity flag selected by user | -12 |
-| Product contains manually avoided ingredient | -25 |
-| Product shares ingredients with products the user reacted badly to | -6 per ingredient, up to -24 |
-| Product has comedogenic/heavy caution and user selected acne/pores concerns | -8 |
-| Product is sunscreen and user selected eye stinging concern | -5 |
-
-## Example
-
-A user has:
+## Example scoring rules
 
 ```text
-Skin type: Combination
-Concerns: acne, texture
-Sensitivities: Fragrance-sensitive
-Preferences: Fragrance-free, Alcohol-free
+Base score = 50
++15 if product matches user skin type
++8 per matched concern, up to +24
++5 for each matched preference such as fragrance-free
+-8 if a selected preference is not satisfied
+-12 for sensitivity flag matches
+-25 for manual avoid ingredient matches
++3 per ingredient overlap with liked products
+-6 per ingredient overlap with bad reaction products
 ```
 
-A product may get:
+## Ingredient risk explanation
+
+Each ingredient gets a small explanation row:
+
+- Helpful
+- Neutral
+- Watch
+- High caution
+
+The app explains whether an ingredient matched the user's avoid list, sensitivity flags, acne/comedogenic cautions, or past reaction patterns.
+
+## Safety wording
+
+The app should say:
 
 ```text
-Base score: 50
-+15 combination skin match
-+8 acne concern match
-+5 fragrance-free
-+5 alcohol-free
--12 fragrance risk if present
-Final score: 71/100
+Possible pattern
+May be a concern
+Patch test recommended
 ```
 
-## Why Rule-Based First?
+It should avoid saying:
 
-- Easy to understand
-- Easy to debug
-- Good for portfolio explanation
-- Does not need thousands of user reviews
-- Safer than pretending AI can diagnose skin reactions
-
-## Future Machine Learning Ideas
-
-Later, the app could use:
-
-- Collaborative filtering
-- Ingredient similarity models
-- Clustering users by reaction patterns
-- Natural language processing for user reaction notes
-- Hybrid rule-based plus ML ranking
+```text
+You are allergic
+This ingredient is definitely bad
+This product is medically safe
+```
