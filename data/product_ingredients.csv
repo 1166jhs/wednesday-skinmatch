@@ -1,0 +1,143 @@
+product_id,ingredient_name,ingredient_order
+1,Water,1
+1,Heartleaf Extract,2
+1,Butylene Glycol,3
+1,Panthenol,4
+1,Centella Asiatica Extract,5
+2,Water,1
+2,Birch Sap,2
+2,Glycerin,3
+2,Niacinamide,4
+2,Hyaluronic Acid,5
+3,Snail Secretion Filtrate,1
+3,Butylene Glycol,2
+3,Sodium Hyaluronate,3
+3,Panthenol,4
+4,Water,1
+4,Rice Extract,2
+4,Niacinamide,3
+4,Glycerin,4
+4,Panthenol,5
+5,Water,1
+5,Panthenol,2
+5,Madecassoside,3
+5,Sunflower Seed Oil,4
+5,Dimethicone,5
+6,Water,1
+6,Ceramide NP,2
+6,Shea Butter,3
+6,Dimethicone,4
+6,Panthenol,5
+7,Water,1
+7,Sodium Hyaluronate,2
+7,Hyaluronic Acid,3
+7,Glycerin,4
+7,Panthenol,5
+8,Centella Asiatica Extract,1
+8,Water,2
+8,Glycerin,3
+9,Water,1
+9,Niacinamide,2
+9,Squalane,3
+9,Calendula Extract,4
+10,Water,1
+10,Niacinamide,2
+10,Tea Tree Leaf Oil,3
+10,Betaine Salicylate,4
+10,Fragrance,5
+11,Water,1
+11,Hyaluronic Acid,2
+11,Sodium Hyaluronate,3
+11,Centella Asiatica Extract,4
+12,Water,1
+12,Centella Asiatica Extract,2
+12,Madecassoside,3
+12,Panthenol,4
+13,Water,1
+13,Butylene Glycol,2
+13,Glycerin,3
+13,Panthenol,4
+14,Water,1
+14,Rice Extract,2
+14,Niacinamide,3
+14,Glycerin,4
+15,Water,1
+15,Hyaluronic Acid,2
+15,Centella Asiatica Extract,3
+15,Panthenol,4
+16,Water,1
+16,Salicylic Acid,2
+16,Fragrance,3
+16,Limonene,4
+17,Water,1
+17,Glycerin,2
+17,Panthenol,3
+18,Sunflower Seed Oil,1
+18,Fragrance,2
+18,Limonene,3
+18,Tea Tree Leaf Oil,4
+19,Water,1
+19,Tea Tree Leaf Oil,2
+19,Betaine Salicylate,3
+19,Butylene Glycol,4
+20,Water,1
+20,Ceramide NP,2
+20,Shea Butter,3
+20,Glycerin,4
+21,Water,1
+21,Ferment Filtrate,2
+21,Niacinamide,3
+21,Fragrance,4
+22,Water,1
+22,Rice Extract,2
+22,Hyaluronic Acid,3
+22,Panthenol,4
+23,Water,1
+23,Propolis Extract,2
+23,Niacinamide,3
+23,Panthenol,4
+24,Water,1
+24,Ascorbic Acid,2
+24,Niacinamide,3
+24,Fragrance,4
+25,Water,1
+25,Ceramide NP,2
+25,Panthenol,3
+25,Dimethicone,4
+25,Shea Butter,5
+26,Water,1
+26,Heartleaf Extract,2
+26,Centella Asiatica Extract,3
+26,Panthenol,4
+27,Water,1
+27,Salicylic Acid,2
+27,Betaine Salicylate,3
+27,Panthenol,4
+28,Sunflower Seed Oil,1
+28,Fragrance,2
+28,Limonene,3
+28,Linalool,4
+30,Water,1
+30,Retinol,2
+30,Panthenol,3
+30,Tocopherol,4
+31,Water,1
+31,Spicule,2
+31,Niacinamide,3
+31,Fragrance,4
+32,Water,1
+32,Spicule,2
+32,Niacinamide,3
+32,Fragrance,4
+33,Water,1
+33,Collagen Extract,2
+33,Hyaluronic Acid,3
+33,Panthenol,4
+34,Water,1
+34,Niacinamide,2
+34,Tranexamic Acid,3
+34,Panthenol,4
+35,Water,1
+35,Ferment Filtrate,2
+35,Glycerin,3
+35,Hyaluronic Acid,4

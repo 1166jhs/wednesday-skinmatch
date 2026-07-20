@@ -1,0 +1,41 @@
+ingredient_name,ingredient_category,flags,benefits,possible_concerns
+Water,base,"low_risk",solvent/base,low risk
+Glycerin,humectant,"hydrating,low_risk",hydration,low risk
+Butylene Glycol,humectant,"hydrating",hydration,can irritate very reactive skin
+Niacinamide,active,"brightening,barrier_support",brightening and barrier support,can irritate some users especially at high percentages
+Panthenol,soothing,"soothing,barrier_support,hydrating",barrier support and calming,low risk
+Centella Asiatica Extract,soothing,"soothing,barrier_support",calming and redness support,low risk
+Heartleaf Extract,soothing,"soothing",calming,botanical sensitivity possible
+Hyaluronic Acid,humectant,"hydrating",hydration,low risk
+Sodium Hyaluronate,humectant,"hydrating",hydration,low risk
+Snail Secretion Filtrate,humectant,"hydrating,barrier_support",hydration and barrier feel,avoid if personally sensitive
+Ceramide NP,lipid,"barrier_support,hydrating",barrier support,low risk
+Madecassoside,soothing,"soothing,barrier_support",calming and barrier support,low risk
+Green Tea Extract,antioxidant,"soothing,antioxidant",calming and antioxidant support,botanical sensitivity possible
+Propolis Extract,active,"soothing,brightening",glow and calming,bee-related sensitivity possible
+Rice Extract,active,"brightening,hydrating",glow and hydration,low risk
+Ferment Filtrate,active,"brightening,barrier_support",skin conditioning,can irritate some reactive skin
+Retinol,active,"retinoid,texture,acne_support",texture and acne support,can irritate; avoid during pregnancy unless doctor says okay
+Betaine Salicylate,exfoliant,"bha,exfoliating,acne_support",blackhead and texture support,can irritate sensitive or damaged barrier skin
+Salicylic Acid,exfoliant,"bha,exfoliating,acne_support",blackhead and acne support,can irritate sensitive skin
+Glycolic Acid,exfoliant,"aha,exfoliating",texture support,can irritate or increase sun sensitivity
+Lactic Acid,exfoliant,"aha,exfoliating,hydrating",gentler exfoliation,can irritate sensitive skin
+PHA,exfoliant,"pha,exfoliating",gentle texture support,can still irritate overused skin
+Alcohol Denat.,solvent,"drying_alcohol",lightweight finish,may dry or irritate sensitive/dry skin
+Fragrance,fragrance,"fragrance",scent,common irritation concern for sensitive skin
+Limonene,fragrance,"fragrance,essential_oil",scent,possible fragrance allergen concern
+Linalool,fragrance,"fragrance,essential_oil",scent,possible fragrance allergen concern
+Tea Tree Leaf Oil,essential_oil,"essential_oil,acne_support",acne support for some users,can irritate sensitive skin or asthma-prone users due to scent
+Shea Butter,emollient,"rich,comedogenic_caution",rich moisture,can feel heavy or clogging for some acne-prone users
+Sunflower Seed Oil,emollient,"emollient",softening,low risk for many users
+Mineral Oil,occlusive,"occlusive",moisture sealing,can feel heavy for oily skin
+Dimethicone,silicone,"barrier_support,occlusive",barrier feel and smoothing,low risk
+Tocopherol,antioxidant,"antioxidant",antioxidant support,can irritate some reactive users
+Tranexamic Acid,active,"brightening",hyperpigmentation support,low risk but patch test
+Ascorbic Acid,active,"vitamin_c,brightening",brightening,can sting sensitive skin
+Spicule,active,"texture,spicule",texture support,can sting and irritate sensitive skin
+Mugwort Extract,soothing,"soothing",calming,botanical sensitivity possible
+Birch Sap,humectant,"hydrating",hydration,botanical sensitivity possible
+Squalane,emollient,"emollient,barrier_support",softening and barrier feel,low risk
+Calendula Extract,soothing,"soothing",calming,botanical sensitivity possible
+Collagen Extract,humectant,"hydrating",hydration feel,low risk
