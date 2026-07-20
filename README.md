@@ -20,13 +20,29 @@ Wednesday Skinmatch is a personalised Korean skincare recommendation prototype. 
 - Local CSV storage for development
 - Optional Supabase login and cloud database storage
 
-## Tech stack
+## Technical Highlights
 
-- Python
-- Streamlit
-- Pandas
-- Local CSV files for MVP storage
-- Optional Supabase Auth + Database for cloud mode
+- Built with **Python** and **Streamlit** for the web app interface
+- Used **Pandas** for product data handling, ingredient matching, and recommendation logic
+- Connected **Supabase** for user sign up, login, and cloud data storage
+- Used **CSV datasets** for the skincare product, ingredient, and reaction data prototype
+- Implemented a **rule-based recommendation system** that scores products based on skin type, concerns, sensitivities, avoid ingredients, and past product reactions
+- Added **ingredient-level explanations** so users can understand why a product may or may not suit their profile
+- Built **product search**, **product comparison**, **morning/night routine builder**, and **reaction history** features
+- Used **Git and GitHub** for version control, documentation, and project tracking
+- Deployed the app using **Streamlit Community Cloud**
+
+## Skills Demonstrated
+
+- Python programming
+- Data handling with Pandas
+- Streamlit app development
+- Supabase authentication and database setup
+- Rule-based recommendation logic
+- UI/UX improvement with custom CSS
+- Git/GitHub workflow
+- Debugging and deployment
+- Writing project documentation
 
 ## Run locally
 
@@ -92,10 +108,19 @@ For VSCode and GitHub commands, follow:
 docs/VSCODE_GIT_WORKFLOW.md
 ```
 
+## Project Background
+
+I came up with the idea for Wednesday Skinmatch from my experience working as a beauty advisor in retail. Many customers were interested in Korean skincare, but they were also unsure about whether certain products would suit their skin type, sensitivities, or previous irritation history.
+
+I wanted to build a prototype that reflects that kind of real customer concern. Instead of only showing product information, the app uses a user's skin profile and reaction history to make more personalised and explainable recommendations.
+
+This project took around 2–3 weeks to research, build, test, and improve. It was a useful learning experience because I worked through the full process of planning the idea, designing the data structure, building the recommendation logic, connecting authentication and cloud storage, improving the UI, fixing bugs, using Git/GitHub, and deploying the app.
+
 ## Future improvements
 
 - Real mobile barcode scanning
 - Larger Korean skincare product dataset
-- Admin screen for adding products
-- Public deployment through Streamlit Community Cloud
+- Admin screen for adding and editing products
+- More detailed ingredient tagging
+- Mobile-friendly UI improvements
 - Mobile app version using Flutter
